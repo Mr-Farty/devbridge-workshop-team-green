@@ -1,12 +1,9 @@
 class SettingsPage {
 
+settingsButton = ":nth-child(5) > :nth-child(1) > .v-list__tile";
 
-
-    goToSettings(url){
-        cy.visit(url+"settings");
-    }
-    toggleFancyNotifications(){
-
+    goToSettings(){
+        cy.get(this.settingsButton).click();
     }
     
 }
