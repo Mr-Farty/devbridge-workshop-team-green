@@ -2,6 +2,8 @@ class MainPage {
 
 orderButton = ".orders-list-button";
 notification = ".v-snack__content";
+logoutButton = ":nth-child(5) > :nth-child(2) > .v-list__tile";
+cartObjects = "span.v-chip__content > i";
 
 
     addToCart(){
@@ -18,6 +20,10 @@ notification = ".v-snack__content";
     checkNotification(){
         cy.get(this.notification).should('exist');
     }
+    logOut(){
+        cy.get(this.logoutButton).click();
+    }
+
 }
 
 export default MainPage 
