@@ -19,10 +19,6 @@ describe('Lunch Page', () => {
         })
     })
         context('Test cart', () => {
-        it.only("Cart clean", () => {
-            cy.wait(4000);
-            mainPage.cleanCart();
-        })
         it.only("Order item from the menu", () => {
             mainPage.addToCart();
             mainPage.order();
@@ -32,6 +28,11 @@ describe('Lunch Page', () => {
     context('Order Notification', () => {
         it.only("Check if the notification pops-up when ordering", () => {
             mainPage.checkNotification();
+        })
+    })
+    context('Logout', () => {
+        it.only("User logs out", () => {
+            mainPage.logOut();
         })
     })
 })
