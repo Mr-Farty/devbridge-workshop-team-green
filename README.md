@@ -1,8 +1,9 @@
 # Devbridge-Workshop-Team-Green
-This is a testing sequence to Find out wether "fancy" notifications are turned on or off.
+This is a Testing Sequence to find out wether "fancy" notifications are turned on or off.
 If the test fails, "fancy" notifications are off.
 
-You should fill in the Missing Data in these fields for test to work:
+# IMPORTANT!
+You should fill in the Missing Data in these fields below. Also you should have an empty cart on your account for this test to work:
 
 var username = ""; //USERNAME HERE
 
