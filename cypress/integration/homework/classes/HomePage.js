@@ -1,20 +1,15 @@
 class HomePage {
 
 
-    clearButton = "#clearButton";
-    actionDropDown = "#selectOperationDropdown";
-    calculateButton = "#calculateButton";
-    numberField1 = "#number1Field";
-    numberField2 = "#number2Field";
-    integersOnlyCheckbox = "#integerSelect";
+    logInUsername = ":nth-child(1) > .v-input__control > .v-input__slot > .v-text-field__slot > input";
+    logInPassword = ":nth-child(2) > .v-input__control > .v-input__slot > .v-text-field__slot > input";
+    logInButton = ".v-btn__content";
 
-    enterFieldsWith(number1, number2, action) {
-        cy.get(this.numberField1).clear()
-        cy.get(this.numberField1).type(number1)
-        cy.get(this.numberField2).clear()
-        cy.get(this.numberField2).type(number2)
-        cy.get(this.actionDropDown).select(action)
-        cy.get(this.calculateButton).click()
+
+    logInToWebsite(username, password){
+        cy.get(this.logInUsername).type(username);
+        cy.get(this.logInPassword).type(password);
+        cy.get(this.logInButton).click();
     }
     
 }

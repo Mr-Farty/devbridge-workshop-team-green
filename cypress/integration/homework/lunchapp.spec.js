@@ -4,10 +4,15 @@ import HomePage from './classes/HomePage.js'
 
 var homePage = new HomePage
 
-var website = "https://testsheepnz.github.io/BasicCalculator";
+var loginSite = "https://lunch.devbstaging.com/login-password";
+var username = "audrius@green.kns";
+var password = "Grass101";
 
-describe('Calculator Homepage', () => {
-    describe('Addition', () => {
-       
+describe('Lunch Page', () => {
+    describe('Log in', () => {
+        it.only("Go to the log-in site and log-in", () => {
+        cy.visit(loginSite);
+        homePage.logInToWebsite(username, password);
+        })
     })
 })
