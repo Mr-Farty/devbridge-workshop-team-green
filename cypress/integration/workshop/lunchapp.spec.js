@@ -7,8 +7,8 @@ var loginPage = new LoginPage
 var mainPage = new MainPage
 
 var website = "https://lunch.devbstaging.com/";
-var username = "audrius@green.kns"; //USERNAME HERE
-var password = "Grass101"; //PASSWORD HERE
+var username = ""; //USERNAME HERE
+var password = ""; //PASSWORD HERE
 
 
 describe('Lunch Page', () => {
