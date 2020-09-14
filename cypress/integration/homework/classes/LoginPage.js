@@ -1,4 +1,4 @@
-class HomePage {
+class LoginPage {
 
 
     logInUsername = ":nth-child(1) > .v-input__control > .v-input__slot > .v-text-field__slot > input";
@@ -14,4 +14,4 @@ class HomePage {
     
 }
 
-export default HomePage
+export default LoginPage

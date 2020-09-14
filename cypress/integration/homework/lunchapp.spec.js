@@ -1,8 +1,8 @@
 // <reference types="Cypress" />
 
-import HomePage from './classes/HomePage.js'
+import LoginPage from './classes/LoginPage.js'
 
-var homePage = new HomePage
+var loginPag = new LoginPage
 
 var loginSite = "https://lunch.devbstaging.com/login-password";
 var username = "audrius@green.kns";
@@ -12,7 +12,7 @@ describe('Lunch Page', () => {
     describe('Log in', () => {
         it.only("Go to the log-in site and log-in", () => {
         cy.visit(loginSite);
-        homePage.logInToWebsite(username, password);
+        loginPage.logInToWebsite(username, password);
         })
     })
 })
