@@ -1,19 +1,23 @@
 class MainPage {
 
-item = ":nth-child(4) > .layout > .dish-card > :nth-child(1)";
-itemPrice = ":nth-child(2) > .layout > .dish-card > :nth-child(1) > .mx-1 > .grey--text"
-duplicateIcon = ".v-avatar > .v-badge > .v-icon";
 orderButton = ".orders-list-button";
+notification = ".v-snack__content";
 
 
     addToCart(){
-        cy.get(this.item).click();
+        cy.get(".dish-card").each(($el) => {
+            cy.wrap($el).click();
+        });
     }
     order(){
         cy.get(this.orderButton).click();
     }
-    
-    
+    cleanCart(){
+        cy.get(this.orderButton).click();
+    }
+    checkNotification(){
+        cy.get(this.notification).should('exist');
+    }
 }
 
 export default MainPage 
